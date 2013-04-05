@@ -17,9 +17,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "mongoid_lol_finder"
   gem.homepage = "http://github.com/loldesign/mongoid_lol_finder"
   gem.license = "MIT"
-  gem.summary = 'Find in easy way some document with just Model.search(#sting#)'
+  gem.summary = 'Find in easy way some document with just Model.search(sting)'
   gem.description = "This gem will find some document with some string that you want"
-  gem.email = "eduardozaghi@gmail.com"
+  gem.email = "eduardo@loldesign.com.br"
   gem.authors = ["Eduardo Zaghi", "Marco Singer"]
   # dependencies defined in Gemfile
 end
