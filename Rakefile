@@ -15,12 +15,12 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "mongoid_lol_finder"
-  gem.homepage = "http://github.com/eduzera/mongoid_lol_finder"
+  gem.homepage = "http://github.com/loldesign/mongoid_lol_finder"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = 'Find in easy way some document with just Model.search(#sting#)'
+  gem.description = "This gem will find some document with some string that you want"
   gem.email = "eduardozaghi@gmail.com"
-  gem.authors = ["Eduardo Zaghi"]
+  gem.authors = ["Eduardo Zaghi", "Marco Singer"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
