@@ -10,6 +10,9 @@ require 'mongoid_lol_finder'
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
+# requiring auxilliary files
+Dir["#{File.dirname(__FILE__)}/auxilliary/*.rb"].each {|f| require f}
+
 DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.orm = :moped
 
