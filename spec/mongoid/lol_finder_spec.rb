@@ -1,40 +1,6 @@
 require 'spec_helper'
 
 describe Mongoid::LolFinder do
-  class Fighter
-    include Mongoid::Document
-    include Mongoid::LolFinder
-
-    field :name
-    field :coach_name
-    field :location
-    field :equipaments, type: Hash , default: {}
-    field :graduation , type: Array, default: []
-
-    find_for :name, :coach_name, :division, :sponsors, :equipaments, :graduation
-
-    belongs_to :division
-    embeds_many :sponsors
-  end
-
-  class Division
-    include Mongoid::Document
-    include Mongoid::LolFinder
-
-    field :name
-
-    find_for :name
-
-    has_many :fighters
-  end
-
-  class Sponsor
-    include Mongoid::Document
-
-    field :name
-
-    embedded_in :fighter
-  end
 
   let!(:rocky) { Fighter.create( name: 'Rocky Balboa', 
                                  coach_name: 'Apollo Creed', 
