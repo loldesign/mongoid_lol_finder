@@ -23,7 +23,7 @@ module Mongoid
       end
 
       def by_belongs_to association, relation
-        return relation unless association.present?
+        return relation unless association[:id].present?
 
         relation.where("#{association[:name]}_id" => association[:id])
       end

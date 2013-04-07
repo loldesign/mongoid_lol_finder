@@ -19,8 +19,8 @@ describe Mongoid::LolFilter do
       it { Fighter.filter(belongs_to: {name: 'division', id: heavyweight.id}).should have(1).item }
       it { Fighter.filter(belongs_to: {name: 'division', id: light_heavyweight.id}).should have(1).item }
 
-      it { Fighter.filter(belongs_to: {name: 'division', id: nil}).should have(0).item }
-      it { Fighter.filter(belongs_to: {name: 'division', id: ''}).should have(0).item }
+      it { Fighter.filter(belongs_to: {name: 'division', id: nil}).should have(2).item }
+      it { Fighter.filter(belongs_to: {name: 'division', id: ''}).should have(2).item }
 
       it { Fighter.filter(belongs_to: {name: 'division', id: heavyweight.id}).should eq([fighter_1]) }
       it { Fighter.filter(belongs_to: {name: 'division', id: light_heavyweight.id}).should eq([fighter_2]) }
