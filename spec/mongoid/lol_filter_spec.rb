@@ -12,6 +12,7 @@ describe Mongoid::LolFilter do
       it { Fighter.filter(created_at: ['01/01/2012', '01/11/2012']).should have(0).item }
       it { Fighter.filter(created_at: ['01/06/2000', '30/06/2000']).should have(1).item }
       it { Fighter.filter(created_at: ['01/06/2000', '30/07/2000']).should have(2).item }
+      it { Fighter.filter(created_at: ['01/06/2000']).should have(2).item }
     end
 
     context 'filter by by_belongs_to' do
@@ -20,7 +21,7 @@ describe Mongoid::LolFilter do
 
       it { Fighter.filter(belongs_to: {name: 'division', id: nil}).should have(0).item }
       it { Fighter.filter(belongs_to: {name: 'division', id: ''}).should have(0).item }
-      
+
       it { Fighter.filter(belongs_to: {name: 'division', id: heavyweight.id}).should eq([fighter_1]) }
       it { Fighter.filter(belongs_to: {name: 'division', id: light_heavyweight.id}).should eq([fighter_2]) }
     end
